@@ -26,13 +26,14 @@ footer{
     position: fixed;
     bottom: 0;
     position: absolute;
-    left: 50%
+    left: 45%
 }
 
 #memeImage{
     margin-right: 200px;
     position: absolute;
-    left: 50%;
+    left: 45%;
+    width: 200px;
 }
 
 h1{
