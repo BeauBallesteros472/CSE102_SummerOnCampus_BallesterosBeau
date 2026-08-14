@@ -27,7 +27,7 @@ function playCraps()
             let result = "";
             
             // see if the user last - if they rolled sum of 7 or 11
-            if(sum == 7 && sum == 11)
+            if(sum == 7 || sum == 11)
                 {
                 console.log("you lost");
                 result = "You LOST!!!!";
