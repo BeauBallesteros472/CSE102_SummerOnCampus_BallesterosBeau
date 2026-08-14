@@ -23,10 +23,12 @@ nav{
 footer{
     text-align: center;
     margin-right: 200px;
+    text-align: bottom;
 }
 
 #memeImage{
     margin-right: 200px;
+    text-align: center;
 }
 
 h1{
