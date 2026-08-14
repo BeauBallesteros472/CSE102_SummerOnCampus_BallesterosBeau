@@ -7,11 +7,13 @@ selector {
 }
 */
 
+/* this changes the color of the background and text */
 body{
     background-color:black;
     color: red;
 }
 
+/* this changes the position and size of the navigation bar */
 nav{
     height: 600px;
     width: 200px;
@@ -20,6 +22,7 @@ nav{
     line-height: 30px
 }
 
+/* this changes the position and size of the footer */
 footer{
     text-align: center;
     margin-right: 200px;
@@ -29,6 +32,7 @@ footer{
     left: 45%
 }
 
+/* this changes the position and size of the meme image */
 #memeImage{
     margin-right: 200px;
     position: absolute;
@@ -36,6 +40,7 @@ footer{
     width: 200px;
 }
 
+/* this changes the position of the heading */
 h1{
     text-align: center;
 }
