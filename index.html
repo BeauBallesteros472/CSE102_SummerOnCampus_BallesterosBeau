@@ -11,6 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- the text for the browser tab -->
     <title>CSC102 - Index</title>
+    <!-- add a link to the JavaScript file -->
+    <script src="code.js"></script>
+    <!-- add a link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
 </head>
 <!-- anything we want our user to see should go in the body section -->
 <body>
@@ -18,12 +22,15 @@
     <header>
         <!-- this is the page title - only use 1 h1 tag a page -->
         <h1>Welcome to my CSC102 page</h1> 
-        <!-- add a link to the CSS file -->
-         <link rel="stylesheet" href="main.css">
     </header>
     
     <!-- this is a paragraph tag -->
     <p>
+        <!-- button that calls on the startMove function -->
+        <button id="btnStart" onclick="startMove();">Start Moving Image</button>
+        <!-- button that calls on the stopMove function -->
+        <button id="btnStop" onclick="stopMove();" disabled="true">Stop Moving Image</button>
+        <!-- image element -->
         <img src="nah-id-win-incineroar.png" width="500" id="memeImage">
     </p>
 

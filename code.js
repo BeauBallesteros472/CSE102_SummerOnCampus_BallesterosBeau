@@ -113,3 +113,43 @@ function playCraps()
             // display the message in the divMessage div
             document.getElementById("divMessage").textContent = message;
         }
+
+    // create a variable to hold the interval id
+        let intervalID = 0;
+
+    // function to start moving the image
+    function startMove()
+    {
+        // get the image element by its id
+        let image = document.getElementById("memeImage");
+
+        // store the current interval id in the intervalID variable so we can clear it later
+        intervalID = setInterval(function() {
+            // the code that runs repeatedly goes here
+            let xCord = getRandomNum();
+            let yCord = getRandomNum();
+            // set the image's position to the new random coordinates
+            image.style.left = xCord + "px";
+            image.style.top = yCord + "px";
+        }, 20);
+
+        // disable the start button and enable the stop button
+        document.getElementById("btnStart").disabled = true;
+        document.getElementById("btnStop").disabled = false;
+    }
+
+    // function to stop moving the image
+    function stopMove()
+    {
+        // call clear interval and pass in the interval id
+        clearInterval(intervalID);
+        // enable the start button and disable the stop button
+        document.getElementById("btnStart").disabled = false;
+        document.getElementById("btnStop").disabled = true;
+    }
+    
+    // function to randomly generate a number 
+    function getRandomNum()
+    {
+        return Math.floor(Math.random() * 800);
+    }
