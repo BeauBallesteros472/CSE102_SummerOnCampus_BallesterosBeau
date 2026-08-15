@@ -202,3 +202,43 @@ function isPalindrome(wordToTest)
     // compare if the cleaned word and the reversed words are the same
     return cleanedWord == reversedWord;
 }
+
+// function to add an audio element to the page
+function addAudio()
+{
+    // create an audio element
+    let audioElem = document.createElement("audio");
+
+    // set the id attribute of the audio element
+    audioElem.setAttribute("id", "myAudio");
+
+    // set the source attribute of the audio element
+    audioElem.setAttribute("src", "dragon-studio-crowd-cheer-and-applause-406644.mp3");
+
+    // set the controls attribute of the audio element
+    audioElem.setAttribute("controls", "controls");
+
+    // append the audio element to the divAudio element
+    document.getElementById("divAudio").appendChild(audioElem);
+
+    // hide the add audio button and show the play and pause buttons
+    document.getElementById("btnAddAudio").hidden = true;
+    
+    // show the play and pause buttons
+    document.getElementById("btnPlayAudio").hidden = false;
+    document.getElementById("btnPauseAudio").hidden = false;
+}
+
+// function to play the audio
+function playAudio()
+{
+    let audio = document.getElementById("myAudio");
+    audio.play();
+}
+
+// function to pause the audio
+function pauseAudio()
+{
+    let audio = document.getElementById("myAudio");
+    audio.pause();
+}

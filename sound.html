@@ -1,0 +1,40 @@
+<!-- Beau Ballesteros -->
+<!-- this tells the browser that this is an HTML 5 webpage -->
+<!DOCTYPE html>
+<!-- this is the way the page needs to be setup; lang=English - leave this -->
+<html lang="en">
+<!-- this is the head section - this is primarily for the browser and search engines -->
+<head>
+    <!-- heads up to the browser that pretty much any language might be on our page -->
+    <meta charset="UTF-8">
+    <!-- this is the first step in mobile development - the wepage will look funky on a phone without this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the text for the browser tab -->
+    <title>Sound Garden</title>
+    <!-- add link to the javascript file -->
+    <script src="code.js"></script>
+    <!-- add link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<!-- anything we want our user to see goes in the body section -->
+<body>
+    <!-- this is typically info at the top of the page -->
+    <header>
+        <!-- this is the page title - only use 1 h1 tag a page -->
+        <h1>Sound Garden</h1>
+    </header>
+
+    <!-- this is where the main content of the page goes -->
+    <main>
+        <!-- this is where the audio element will be added -->
+        <div id="divAudio"></div>
+            <!-- this is where the audio element will be added -->
+            <button id="btnAddAudio" onclick="addAudio()">Add Audio</button>
+            <!-- this is where the play button will be added -->
+            <button id="btnPlayAudio" onclick="playAudio()">Play Audio</button>
+            <!-- this is where the pause button will be added -->
+            <button id="btnPauseAudio" onclick="pauseAudio()">Pause Audio</button>
+<!-- the closing body tag should be the 2nd last line of code on each HTML page -->    
+</body>
+<!-- this is always the last line of our HTML page -->
+</html>
