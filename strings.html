@@ -1,0 +1,56 @@
+<!-- Beau Ballesteros -->
+<!-- this tells the browser that this is an HTML 5 webpage -->
+<!DOCTYPE html>
+<!-- this is the way the page needs to be setup; lang=English - leave this -->
+<html lang="en">
+<!-- this is the head section - this is primarily for the browser and search engines -->
+<head>
+    <!-- heads up to the browser that pretty much any language might be on our page -->
+    <meta charset="UTF-8">
+    <!-- this is the first step in mobile development - the wepage will look funky on a phone without this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the text for the browser tab -->
+    <title>CSC102 User Input</title>
+    <!-- add a link to the JavaScript file -->
+    <script src="code.js"></script>
+    <!-- add a link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<!-- anything we want our user to see should go in the body section -->
+<body>
+    <!-- this is typically info at the top of the page -->
+    <header>
+        <!-- this is the page title - only use 1 h1 tag a page -->
+        <h1 id="heading">User Input Examples</h1>
+    </header>
+    <!-- this is where the main content of the page goes -->
+    <main>
+        <!-- this is where the form information will be displayed -->
+        <div id="divMessage"></div>
+        <!-- this is the form that will take user input -->
+        <form method="post" action="#" name="frmInput" id="frmInput" onsubmit="return false;"> == $0
+            <!-- this is the label for the first name input -->
+            <label for="txtFirstName">First Name:</label>
+            <!-- this is the input for the first name -->
+            <input type="text" name="txtFirstName" id="txtFirstName" placeholder="Jane">
+            <br>
+            <!-- this is the label for the last name input -->
+            <label for="txtLastName" >Last Name:</label>
+            <!-- this is the input for the last name -->
+            <input type="text" name="txtLastName" id="txtLastName" placeholder="Doe">
+            <br>
+            <!-- this is the label for the zip code input -->
+            <label for="txtZipCode" >Zip Code:</label>
+            <!-- this is the input for the zip code -->
+            <input type="text" name="txtZipCode" id="txtZipCode" placeholder="85283">
+            <br>
+            <!-- this is the label for the submit button -->
+            <label for="btnSubmit">Save Inputs:</label>
+            <!-- this button calls the validateForm function when clicked -->
+            <button onclick="validateForm();">Save Inputs</button>
+        </form>
+    </main>
+<!-- the closing body tag should be the 2nd last line of code on each HTML page -->
+</body>
+<!-- this is always the last line of our HTML page -->
+</html>

@@ -64,3 +64,52 @@ function playCraps()
             // round the number and return the value
             return Math.ceil(die);
         }
+
+        // create a function to validate the form
+        function validateForm()
+        {
+            // log that the function was called
+            let FullName = "";
+
+            // get the values from the form and trim any whitespace
+            let firstName = document.getElementById("txtFirstName").value.trim();
+
+            let lastName = document.getElementById("txtLastName").value.trim();
+
+            let zipCode = document.getElementById("txtZipCode").value.trim();
+
+            // log the values to the console
+            console.log("First Name: " + firstName);
+            console.log("Last Name: " + lastName);
+            console.log("Zip Code: " + zipCode);
+
+            // create a variable to hold the message
+            let message = "";
+
+            // create the full name by concatenating the first and last names
+            fullName = document.getElementById("txtFirstName").value.trim() + " " + document.getElementById("txtLastName").value.trim();
+
+            // log the full name to the console
+            console.log("fullName= " + fullName);
+
+            // check if the full name is greater than 20 characters or if the full name is only 1 character
+            if(fullName.length > 20 || fullName.length == 1)
+            {
+                message = "Invalid name. Please try again.";
+                console.log("invalid name");
+            }
+            // check if the zip code is not equal to 5 characters
+            else if(zipCode.length != 5)
+            {
+                message = "Invalid zip code. Please try again.";
+                console.log("invalid zip code");
+            }
+            // if the full name is valid and the zip code is valid, then display the welcome message
+            else 
+            {
+                message = "Welcome, " + firstName + ". The secret word is Validation.";
+            }
+
+            // display the message in the divMessage div
+            document.getElementById("divMessage").textContent = message;
+        }
