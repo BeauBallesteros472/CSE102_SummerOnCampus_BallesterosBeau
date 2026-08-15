@@ -242,3 +242,95 @@ function pauseAudio()
     let audio = document.getElementById("myAudio");
     audio.pause();
 }
+
+function startCrowdWhispers()
+{
+    console.log("Function Called");
+    let audioElem = document.createElement("audio");
+
+    audioElem.setAttribute("id", "myAudio");
+
+    audioElem.setAttribute("src", "freesound-community-crowd-murmuring-60721.mp3");
+
+    document.getElementById("question2").hidden = false;
+    document.getElementById("btnAnswer2").hidden = false;
+    document.getElementById("btnAnswer3").hidden = false;
+
+    document.getElementById("h2Ready").hidden = true;
+    document.getElementById("btnStartCrowd").hidden = true;
+    document.getElementById("body").style="background-image: url(dark-group.png); background-size: cover;";
+}
+
+function playFree()
+{
+    let audioElem = document.createElement("audio");
+
+    audioElem.setAttribute("id", "myAudio3");
+
+    audioElem.setAttribute("src", "Glitch.mp3");
+
+    document.getElementById("divAudio3").appendChild(audioElem);
+
+    let audio = document.getElementById("myAudio3");
+    audio.play();
+
+    document.getElementById("body").style="background-image: url(Freedom-Light.jpg); background-size: cover;";
+
+    document.getElementById("btnReset").hidden = false;
+
+    document.getElementById("question2").hidden = true;
+    document.getElementById("Answer2").hidden = true;
+    document.getElementById("Answer3").hidden = true;
+
+    document.getElementById("h2Ready").hidden = false;
+    document.getElementById("btnStartCrowd").hidden = false;
+
+    document.getElementById("btnReset").hidden = false;
+
+    console.log("Free");
+}
+
+function playWaltz()
+{
+    let audioElem = document.createElement("audio");
+
+    audioElem.setAttribute("id", "myAudio2");
+
+    audioElem.setAttribute("src", "Waltz.mp3");
+
+    document.getElementById("divAudio2").appendChild(audioElem);
+
+    let audio = document.getElementById("myAudio2");
+    audio.play();
+
+    document.getElementById("body").style="background-image: url(Dark-Chamber.png); background-size: cover;";
+
+    document.getElementById("btnReset").hidden = false;
+
+    document.getElementById("question2").hidden = true;
+    document.getElementById("Answer2").hidden = true;
+    document.getElementById("Answer3").hidden = true;
+
+    document.getElementById("h2Ready").hidden = false;
+    document.getElementById("btnStartCrowd").hidden = false;
+
+    document.getElementById("btnReset").hidden = false;
+
+    console.log("Waltz");
+}
+
+function ResetPage()
+{
+    // stop and remove any audio elements created by the page
+    ['myAudio', 'myAudio2', 'myAudio3'].forEach(id => {
+        const a = document.getElementById(id);
+        if (a) {
+            a.pause();
+            a.currentTime = 0;
+            a.remove();
+        }
+    });
+    
+    document.getElementById("body").style.backgroundImage = "";
+    document.getElementById("body").style.backgroundSize = "";
+}

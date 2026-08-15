@@ -1,0 +1,52 @@
+<!-- Beau Ballesteros -->
+<!-- this tells the browser that this is an HTML 5 webpage -->
+<!DOCTYPE html>
+<!-- this is the way the page needs to be setup; lang=English - leave this -->
+<html lang="en">
+<!-- this is the head section - this is primarily for the browser and search engines -->
+<head>
+    <!-- heads up to the browser that pretty much any language might be on our page -->
+    <meta charset="UTF-8">
+    <!-- this is the first step in mobile development - the wepage will look funky on a phone without this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the text for the browser tab -->
+    <title>All Together - Earn your Freedom!</title>
+    <!-- add a link to the JavaScript file -->
+    <script src="code.js"></script>
+    <!-- add a link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+<!-- anything we want our user to see should go in the body section -->
+<body>
+    <!-- this is typically info at the top of the page -->
+    <header>
+        <!-- this is the page title - only use 1 h1 tag a page -->
+        <h1 id="heading">All Together - Earn your Freedom!</h1>
+    </header>
+    <!-- this is where the main content of the page goes -->
+    <main>
+        <!-- this is where the audio elements will be added -->
+        <div id="divAudio1"></div>
+        <div id="divAudio2"></div>
+        <div id="divAudio3"></div>
+        <!-- this is where the main prompt of the minigame will be displayed -->
+        <h2 id="h2Ready">Ready?</h2>
+        <!-- this is where the start button of the minigame will be displayed -->
+        <button id="btnStartCrowd" onclick="startCrowdWhispers()">Yes</button>
+        <br>
+        <br>
+        <!-- this is where the prompt will change, and the new answer buttons will appear -->
+        <h2 id="question2" hidden="true">You find yourself in a dank and cold cellar, with a mysterious group muttering ill words aimed to you. How do you proceed?</h2>
+        <button id="btnAnswer2" hidden="true" onclick="playFree()">Sneak</button>
+        <button id="btnAnswer3" hidden="true" onclick="playWaltz()">Confront</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- this button will set the page back to the first prompt -->
+        <button id="btnReset" hidden="true" onclick="resetPage()">Reset</button>
+    </main>
+<!-- the closing body tag should be the 2nd last line of code on each HTML page -->
+</body>
+<!-- this is always the last line of our HTML page -->
+</html>
