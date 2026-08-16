@@ -15,9 +15,6 @@ body{
 
 /* this changes the position and size of the navigation bar */
 nav{
-    height: 600px;
-    width: 200px;
-    float: left;
     padding: 5px;
     line-height: 30px
 }
@@ -43,4 +40,21 @@ footer{
 /* this changes the position of the heading */
 h1{
     text-align: center;
+}
+
+nav{
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(119, 6, 44);
+    color: rgb(3, 33, 73);
+}
+
+nav a{
+    padding: 8px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(80, 212, 235);
+    border: 4px solid rgb(235, 164, 164);
+    border-radius: 10px;
+    font-weight: bold;
 }

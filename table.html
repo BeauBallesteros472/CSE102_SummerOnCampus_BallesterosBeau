@@ -1,0 +1,144 @@
+<!-- Beau Ballesteros -->
+<!-- this tells the browser that this is an HTML 5 webpage -->
+<!DOCTYPE html>
+<!-- this is the way the page needs to be setup; lang=English - leave this -->
+<html lang="en">
+<!-- this is the head section - this is primarily for the browser and search engines -->
+<head>
+    <!-- heads up to the browser that pretty much any language might be on our page -->
+    <meta charset="UTF-8">
+    <!-- this is the first step in mobile development - the wepage will look funky on a phone without this -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the text for the browser tab -->
+    <title>Table</title>
+    <!-- add a link to the JavaScript file -->
+    <script src="code.js"></script>
+    <!-- add a link to the CSS file -->
+    <link rel="stylesheet" href="main.css">
+    <!-- adds features to the webpage, including a table in this case -->
+    <style>
+        /* changes the features of the table */
+        table
+        {
+            max-width: 400px;
+            /* multiple border in same area will collapse inot a single border */
+
+            border-collapse: collapse;
+        }
+
+        tr, th, td
+        {
+            padding: 10px;
+        }
+
+        tr 
+        {
+            border: 2px solid green;
+        }
+
+        td
+        {
+            border: 2px solid green;
+        }
+
+        th
+        {
+            background-color: rgb(138, 80, 189);
+            color: navy;
+            text-align: left;
+        }
+
+        tr:nth-child(even)
+        {
+            background-color: lightgray;
+            color: navy;
+        }
+
+        tr:hover
+        {
+            background-color: rgb(98, 34, 152);
+            color: rgb(198, 198, 202);
+        }
+    </style>
+</head>
+<!-- anything we want our user to see should go in the body section -->
+<body>
+    <!-- this is typically info at the top of the page -->
+    <header>
+        <!-- this is the page title - only use 1 h1 tag a page -->
+        <h1>Table</h1>
+        <!-- this serves as a navigation bar to get to other HTML pages -->
+        <nav>
+            <a href="index.html">Index</a> 
+            <a href="boards.html">Boards</a>
+            <a href="Together.html">All Together</a>
+            <a href="table.html">This Page</a>
+            <a href="strings.html">Input Example</a>
+            <a href="palindrome.html">Palindrome</a>
+            <a href="sound.html">Sounds</a>
+            <a href="game.html">Game</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Game Failures</h1>
+
+        <table id="tbData">
+            <caption>Game project failures and costs</caption>
+            <!-- tr is table row - each should be in a tr -->
+            <!-- <tr>
+                td - table data/cell/column - the actual date goes here
+                <td></td>
+                <td></td>
+            </tr> -->
+
+            <tr>
+                <!-- th is th etable heading -->
+                <th>Project</th>
+                <th>Year</th>
+                <th>Cost</th>
+            </tr>
+        </table>
+
+        <script>
+            function loadData()
+        {
+            let arrProblems = [
+                // first row of data - nested array
+                ["Concord", 2024, "$200M"],
+                ["Suicide Squad: Kill The Justice League", 2024, "$200M+"],
+                ["The Callisto Protocol", 2022, "$162M+"],
+                ["Marvel's Avengers", 2020, "$100M+"]
+            ];
+
+            for (let i=0; i<arrProblems.length; i++)
+            {
+                // create th etable row to display the data 
+                let tr = document.createElement("tr");
+
+                //loop througn each nested array
+                for (let j=0; j < arrProblems[i].length; j++)
+                {
+
+                
+                    // create the table data to display 2 piece of data
+                    let td = document.createElement("td");
+
+                    // put the data in the td
+                    td.textContent = arrProblems[i][j];
+
+                    // append th enew data to the existing row
+                    tr.appendChild(td);
+                }
+
+                // add the new row to the existing row
+                document.getElementById("tbData").appendChild(tr);
+            }
+        }
+        loadData();
+        </script>
+    </main>
+<!-- this is always the last line of our HTML page -->
+</body>
+<!-- this is always the last line of our HTML page -->
+</html>
