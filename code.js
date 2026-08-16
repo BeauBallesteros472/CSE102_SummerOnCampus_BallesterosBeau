@@ -243,24 +243,36 @@ function pauseAudio()
     audio.pause();
 }
 
+// function to start the crowd whispers audio and change the background image
 function startCrowdWhispers()
 {
     console.log("Function Called");
     let audioElem = document.createElement("audio");
 
+    document.getElementById("divAudio1").appendChild(audioElem);
+
     audioElem.setAttribute("id", "myAudio");
 
-    audioElem.setAttribute("src", "freesound-community-crowd-murmuring-60721.mp3");
+    audioElem.setAttribute("src", "freesound_community-crowd-murmuring-60721.mp3");
 
+    let audio = document.getElementById("myAudio");
+    audio.play();
+
+    // hide and show the various attributes of the webpage, e.g. buttons and text
     document.getElementById("question2").hidden = false;
     document.getElementById("btnAnswer2").hidden = false;
     document.getElementById("btnAnswer3").hidden = false;
 
+    document.getElementById("ending1").hidden = true;
+    document.getElementById("ending2").hidden = true;
+
     document.getElementById("h2Ready").hidden = true;
     document.getElementById("btnStartCrowd").hidden = true;
-    document.getElementById("body").style="background-image: url(dark-group.png); background-size: cover;";
+    document.body.style.backgroundImage = "url(dark-group.png)";
+    document.body.style.backgroundSize = "cover";
 }
 
+// function to play the freedom audio and change the background image
 function playFree()
 {
     let audioElem = document.createElement("audio");
@@ -273,23 +285,30 @@ function playFree()
 
     let audio = document.getElementById("myAudio3");
     audio.play();
+    document.getElementById("myAudio").pause();
 
-    document.getElementById("body").style="background-image: url(Freedom-Light.jpg); background-size: cover;";
+    document.body.style.backgroundImage = "url(Freedom-Light.jpg)";
+    document.body.style.backgroundSize = "cover";
 
+    // hide and show the various attributes of the webpage, e.g. buttons and text
     document.getElementById("btnReset").hidden = false;
 
     document.getElementById("question2").hidden = true;
-    document.getElementById("Answer2").hidden = true;
-    document.getElementById("Answer3").hidden = true;
+    document.getElementById("btnAnswer2").hidden = true;
+    document.getElementById("btnAnswer3").hidden = true;
 
-    document.getElementById("h2Ready").hidden = false;
-    document.getElementById("btnStartCrowd").hidden = false;
+    document.getElementById("ending1").hidden = false;
+    document.getElementById("ending2").hidden = true;
+
+    document.getElementById("h2Ready").hidden = true;
+    document.getElementById("btnStartCrowd").hidden = true;
 
     document.getElementById("btnReset").hidden = false;
 
     console.log("Free");
 }
 
+// function to play the waltz audio and change the background image
 function playWaltz()
 {
     let audioElem = document.createElement("audio");
@@ -302,24 +321,30 @@ function playWaltz()
 
     let audio = document.getElementById("myAudio2");
     audio.play();
+    document.getElementById("myAudio").pause();
 
-    document.getElementById("body").style="background-image: url(Dark-Chamber.png); background-size: cover;";
+    document.body.style.backgroundImage = "url(Dark-Chamber.png)";
+    document.body.style.backgroundSize = "cover";
 
     document.getElementById("btnReset").hidden = false;
 
     document.getElementById("question2").hidden = true;
-    document.getElementById("Answer2").hidden = true;
-    document.getElementById("Answer3").hidden = true;
+    document.getElementById("btnAnswer2").hidden = true;
+    document.getElementById("btnAnswer3").hidden = true;
 
-    document.getElementById("h2Ready").hidden = false;
-    document.getElementById("btnStartCrowd").hidden = false;
+    document.getElementById("ending1").hidden = true;
+    document.getElementById("ending2").hidden = false;
+
+    document.getElementById("h2Ready").hidden = true;
+    document.getElementById("btnStartCrowd").hidden = true;
 
     document.getElementById("btnReset").hidden = false;
 
     console.log("Waltz");
 }
 
-function ResetPage()
+// function to reset the page to its initial state
+function resetPage()
 {
     // stop and remove any audio elements created by the page
     ['myAudio', 'myAudio2', 'myAudio3'].forEach(id => {
@@ -331,6 +356,16 @@ function ResetPage()
         }
     });
     
-    document.getElementById("body").style.backgroundImage = "";
-    document.getElementById("body").style.backgroundSize = "";
+    // reset the visibility of elements to their initial state
+    document.getElementById("h2Ready").hidden = false;
+    document.getElementById("btnStartCrowd").hidden = false;
+    document.getElementById("question2").hidden = true;
+    document.getElementById("btnAnswer2").hidden = true;
+    document.getElementById("btnAnswer3").hidden = true;
+    document.getElementById("ending1").hidden = true;
+    document.getElementById("ending2").hidden = true;
+    document.getElementById("btnReset").hidden = true;
+
+    document.body.style.backgroundImage = "";
+    document.body.style.backgroundSize = "";
 }
